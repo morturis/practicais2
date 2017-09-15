@@ -1,13 +1,16 @@
 package kata1;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Kata1 {
 
     public static void main(String[] args) {
-        //En Netbeans taclado por estar obsoleto
-        //Años (solo 1900-1999), meses (Enero = 0), dias
-        Person persona = new Person("Pepito", new Date(01, 9, 15));
+        //notese la forma de instanciar los calendar
+        Calendar date = GregorianCalendar.getInstance();
+        date.set(2001, 9, 12);
+        
+        Person persona = new Person("Pepe", date);
         System.out.println(persona.getName()+" tiene " + 
                 persona.getAge()+ " años");
     }
